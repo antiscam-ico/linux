@@ -1082,6 +1082,7 @@ L:	linux-media@vger.kernel.org
 S:	Supported
 W:	http://ez.analog.com/community/linux-device-drivers
 F:	drivers/media/i2c/adv7180.c
+F:	Documentation/devicetree/bindings/media/i2c/adv7180.yaml
 
 ANALOG DEVICES INC ADV748X DRIVER
 M:	Kieran Bingham <kieran.bingham@ideasonboard.com>
@@ -1179,6 +1180,8 @@ M:	Todd Kjos <tkjos@android.com>
 M:	Martijn Coenen <maco@android.com>
 M:	Joel Fernandes <joel@joelfernandes.org>
 M:	Christian Brauner <christian@brauner.io>
+M:	Hridya Valsaraju <hridya@google.com>
+M:	Suren Baghdasaryan <surenb@google.com>
 L:	devel@driverdev.osuosl.org
 S:	Supported
 T:	git git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging.git
@@ -4441,6 +4444,12 @@ S:	Maintained
 F:	Documentation/hwmon/coretemp.rst
 F:	drivers/hwmon/coretemp.c
 
+CORSAIR-CPRO HARDWARE MONITOR DRIVER
+M:	Marius Zachmann <mail@mariuszachmann.de>
+L:	linux-hwmon@vger.kernel.org
+S:	Maintained
+F:	drivers/hwmon/corsair-cpro.c
+
 COSA/SRP SYNC SERIAL DRIVER
 M:	Jan "Yenya" Kasprzak <kas@fi.muni.cz>
 S:	Maintained
@@ -7011,6 +7020,13 @@ L:	linuxppc-dev@lists.ozlabs.org
 S:	Maintained
 F:	drivers/usb/gadget/udc/fsl*
 
+FREESCALE USB PHY DRIVER
+M:	Ran Wang <ran.wang_1@nxp.com>
+L:	linux-usb@vger.kernel.org
+L:	linuxppc-dev@lists.ozlabs.org
+S:	Maintained
+F:	drivers/usb/phy/phy-fsl-usb*
+
 FREEVXFS FILESYSTEM
 M:	Christoph Hellwig <hch@infradead.org>
 S:	Maintained
@@ -8833,7 +8849,7 @@ M:	Tomas Winkler <tomas.winkler@intel.com>
 L:	linux-kernel@vger.kernel.org
 S:	Supported
 F:	Documentation/driver-api/mei/*
-F:	drivers/misc/mei/*
+F:	drivers/misc/mei/
 F:	drivers/watchdog/mei_wdt.c
 F:	include/linux/mei_cl_bus.h
 F:	include/uapi/linux/mei.h
@@ -12329,6 +12345,7 @@ F:	drivers/nvme/target/
 NVMEM FRAMEWORK
 M:	Srinivas Kandagatla <srinivas.kandagatla@linaro.org>
 S:	Maintained
+T:	git git://git.kernel.org/pub/scm/linux/kernel/git/srini/nvmem.git
 F:	Documentation/ABI/stable/sysfs-bus-nvmem
 F:	Documentation/devicetree/bindings/nvmem/
 F:	drivers/nvmem/
@@ -14299,7 +14316,7 @@ F:	drivers/net/ethernet/qualcomm/rmnet/
 F:	include/linux/if_rmnet.h
 
 QUALCOMM TSENS THERMAL DRIVER
-M:	Amit Kucheria <amit.kucheria@linaro.org>
+M:	Amit Kucheria <amitk@kernel.org>
 L:	linux-pm@vger.kernel.org
 L:	linux-arm-msm@vger.kernel.org
 S:	Maintained
@@ -15366,7 +15383,7 @@ F:	drivers/mmc/host/sdhci*
 F:	include/linux/mmc/sdhci*
 
 SECURE DIGITAL HOST CONTROLLER INTERFACE (SDHCI) MICROCHIP DRIVER
-M:	Ludovic Desroches <ludovic.desroches@microchip.com>
+M:	Eugen Hristev <eugen.hristev@microchip.com>
 L:	linux-mmc@vger.kernel.org
 S:	Supported
 F:	drivers/mmc/host/sdhci-of-at91.c
@@ -16082,8 +16099,9 @@ F:	sound/soc/sof/
 
 SOUNDWIRE SUBSYSTEM
 M:	Vinod Koul <vkoul@kernel.org>
-M:	Sanyog Kale <sanyog.r.kale@intel.com>
+M:	Bard Liao <yung-chuan.liao@linux.intel.com>
 R:	Pierre-Louis Bossart <pierre-louis.bossart@linux.intel.com>
+R:	Sanyog Kale <sanyog.r.kale@intel.com>
 L:	alsa-devel@alsa-project.org (moderated for non-subscribers)
 S:	Supported
 F:	Documentation/driver-api/soundwire/
@@ -17000,7 +17018,7 @@ F:	drivers/media/radio/radio-raremono.c
 THERMAL
 M:	Zhang Rui <rui.zhang@intel.com>
 M:	Daniel Lezcano <daniel.lezcano@linaro.org>
-R:	Amit Kucheria <amit.kucheria@verdurent.com>
+R:	Amit Kucheria <amitk@kernel.org>
 L:	linux-pm@vger.kernel.org
 S:	Supported
 Q:	https://patchwork.kernel.org/project/linux-pm/list/
@@ -18921,6 +18939,15 @@ T:	git git://linuxtv.org/media_tree.git
 F:	Documentation/devicetree/bindings/media/xilinx/
 F:	drivers/media/platform/xilinx/
 F:	include/uapi/linux/xilinx-v4l2-controls.h
+
+XILINX ZYNQMP PSGTR PHY DRIVER
+M:	Anurag Kumar Vulisha <anurag.kumar.vulisha@xilinx.com>
+M:	Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+L:	linux-kernel@vger.kernel.org
+S:	Supported
+T:	git https://github.com/Xilinx/linux-xlnx.git
+F:	Documentation/devicetree/bindings/phy/xlnx,zynqmp-psgtr.yaml
+F:	drivers/phy/xilinx/phy-zynqmp.c
 
 XILLYBUS DRIVER
 M:	Eli Billauer <eli.billauer@gmail.com>
